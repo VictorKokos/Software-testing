@@ -1,7 +1,7 @@
 // File: TestData.cs
 using System.IO;
 
-namespace WebDriver
+namespace Catalog.Tests.Utilities
 {
     public class TestData
     {

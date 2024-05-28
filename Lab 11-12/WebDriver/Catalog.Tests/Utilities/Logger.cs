@@ -1,5 +1,6 @@
 // File: Logger.cs
-namespace WebDriver
+
+namespace Catalog.Tests.Utilities
 {
     public static class Logger
     {

@@ -1,12 +1,14 @@
 ﻿// File: CatalogTests.cs
+using Catalog.Tests.Driver;
 using Catalog.Tests.Pages;
+using Catalog.Tests.Utilities;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using OpenQA.Selenium;
 
-namespace WebDriver
+namespace Catalog.Tests.Tests
 {
     [TestFixture]
     public class CatalogTests
@@ -88,15 +90,15 @@ namespace WebDriver
 
             _profilePage.ClickFirstImageElement();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
 
             _profilePage.WriteImageCommentInput("крутой");
 
-            Thread.Sleep(2000);
+            Thread.Sleep(6000);
 
             _profilePage.ClickImageCommentButton();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(6000);
 
             if (_profilePage.CommentElement != null && _profilePage.CommentElement.Displayed)
             {
@@ -107,6 +109,8 @@ namespace WebDriver
                 Logger.LogError("Ошибка входа: комментарий не найден");
                 Assert.Fail("Ошибка входа: комментарий не найден");
             }
+
+            Thread.Sleep(6000);
         }
 
         [TearDown]
